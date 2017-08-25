@@ -27,7 +27,7 @@ BUCKET_COL = s3.Bucket('bucketname2)
 for key in BUCKET.objects.all():
         key =str(key.key)
         download_path = '/tmp/{}{}'.format(uuid.uuid4(),key)
-        pattern  = re.compile("sdc-nmglobaldata_([^\/]*)-lookup_data.tar.gz$")
+        pattern  = re.compile("somethinh_([^\/]*)-lookup_data.tar.gz$")
         filetime = str(pattern.match(key).group(1))
         # download the tar.gz in the temp folder
         new_key_name = str(download_path +'/'+key)
